@@ -17,7 +17,7 @@ export default function App() {
       <h1>Game of Thrones</h1>
       <h2>Fetch the books</h2>
 
-      {/* Fetch data from API */}
+     
       <div>
         <button className="fetch-button" onClick={fetchData}>
           Fetch Data
@@ -25,11 +25,10 @@ export default function App() {
         <br />
       </div>
 
-      {/* Display data from API */}
+      
       <div className="books">
         {books &&
           books.map((book, index) => {
-            const cleanedDate = new Date(book.released).toDateString();
             const authors = book.authors.join(', ');
 
             return (
@@ -42,7 +41,6 @@ export default function App() {
                   <p>{book.characters}</p>
                   <p>{book.numberOfPages} pages</p>
                   <p>{book.country}</p>
-                  <p>{cleanedDate}</p>
                 </div>
               </div>
             );
