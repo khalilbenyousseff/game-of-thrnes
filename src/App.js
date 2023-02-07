@@ -6,7 +6,7 @@ export default function App() {
 
   const fetchData = async () => {
     const response = await axios.get(
-      'https://www.anapioficeandfire.com/api/books'
+      'https://anapioficeandfire.com/api/books'
     );
 
     setBooks(response.data);
