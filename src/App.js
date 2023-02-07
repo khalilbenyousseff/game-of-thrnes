@@ -13,30 +13,30 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div>
       <h1>Game of Thrones</h1>
       <h2>Fetch the books</h2>
 
      
       <div>
-        <button className="fetch-button" onClick={fetchData}>
+        <button onClick={fetchData}>
           Fetch Data
         </button>
         <br />
       </div>
 
       
-      <div className="books">
+      <div>
         {books &&
           books.map((book, index) => {
             const authors = book.authors.join(', ');
 
             return (
-              <div className="book" key={index}>
+              <div key={index}>
                 <h3>Book {index + 1}</h3>
                 <h2>{book.name}</h2>
 
-                <div className="details">
+                <div>
                   <p>{authors}</p>
                   <p>{book.characters}</p>
                   <p>{book.numberOfPages} pages</p>
